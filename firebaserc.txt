@@ -1,0 +1,5 @@
+{
+  "projects": {
+    "default": "smartdoctorappointment-77763"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "smartcare-booking",
+  "name": "smartappointment",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,35 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.0.6",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "@radix-ui/react-slot": "^1.2.4",
+    "@sendgrid/mail": "^8.1.6",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "firebase": "^12.5.0",
+    "firebase-admin": "^13.6.0",
+    "geist": "^1.5.1",
+    "lucide-react": "^0.554.0",
+    "next-themes": "^0.4.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.6",
-    "tailwindcss": "^4",
+    "@types/react": "19.2.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^15.2.3",
+    "next": "^15.2.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
     "typescript": "^5"
-  }
+  },
+  "description": "This is a Next.js project bootstrapped with create-next-app.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

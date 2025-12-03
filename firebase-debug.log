@@ -1,0 +1,62 @@
+[debug] [2025-11-19T17:10:44.122Z] ----------------------------------------------------------------------
+[debug] [2025-11-19T17:10:44.138Z] Command:       /nix/store/ixbb20farqh1f4fqbmsn6b1ixn8mc8ij-nodejs-20.18.1/bin/node /home/user/.global_modules/bin/firebase deploy --only firestore:indexes
+[debug] [2025-11-19T17:10:44.139Z] CLI Version:   14.24.2
+[debug] [2025-11-19T17:10:44.140Z] Platform:      linux
+[debug] [2025-11-19T17:10:44.140Z] Node Version:  v20.18.1
+[debug] [2025-11-19T17:10:44.140Z] Time:          Wed Nov 19 2025 17:10:44 GMT+0000 (Coordinated Universal Time)
+[debug] [2025-11-19T17:10:44.141Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-11-19T17:10:44.145Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-11-19T17:10:45.213Z] Field "/firestore/indexes" in "firebase.json" is possibly invalid: must be string
+[debug] [2025-11-19T17:10:45.214Z] Field "/firestore" in "firebase.json" is possibly invalid: must be array
+[debug] [2025-11-19T17:10:45.217Z] Field "/firestore" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2025-11-19T17:10:45.252Z] Checked if tokens are valid: false, expires at: 1762988073390
+[debug] [2025-11-19T17:10:45.252Z] Checked if tokens are valid: false, expires at: 1762988073390
+[debug] [2025-11-19T17:10:45.253Z] > refreshing access token with scopes: []
+[debug] [2025-11-19T17:10:45.255Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-19T17:10:45.255Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-19T17:10:45.342Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-19T17:10:45.349Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-19T17:10:45.386Z] >>> [apiv2][query] GET https://monospace-pa.googleapis.com/v1/workspaces/smartappointment-78508187 [none]
+[debug] [2025-11-19T17:10:45.554Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-11-19T17:10:45.555Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-11-19T17:10:46.126Z] <<< [apiv2][status] GET https://monospace-pa.googleapis.com/v1/workspaces/smartappointment-78508187 200
+[debug] [2025-11-19T17:10:46.126Z] <<< [apiv2][body] GET https://monospace-pa.googleapis.com/v1/workspaces/smartappointment-78508187 {"workspaceId":"smartappointment-78508187","name":"SmartAppointment","workspaceRedirectUrl":"firebase-smartappointment-1762609366914.cluster-lu4mup47g5gm4rtyvhzpwbfadi.cloudworkstations.dev","status":"WORKSPACE_STATUS_RUNNING","lastAccessDatetime":"2025-11-19T14:47:23.674340Z","workspaceTemplate":"WORKSPACE_TEMPLATE_BLANK_WEB","owner":"SELF","serviceAccountEmail":"msp-3968758537402328072@monospace-per-ws-sa-5.iam.gserviceaccount.com","enableNix":true,"ownerEmail":"imsiza94@gmail.com","workspaceImageUrl":"https://www.gstatic.com/monospace/250314/workspace-blank-192.png","templateArgs":"{}","templateRepoUrl":"file:///usr/local/monospace/templates/public/blank-nix","workstationAccessToken":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Nsb3VkLmdvb2dsZS5jb20vd29ya3N0YXRpb25zIiwiYXVkIjoiZmlyZWJhc2Utc21hcnRhcHBvaW50bWVudC0xNzYyNjA5MzY2OTE0LmNsdXN0ZXItbHU0bXVwNDdnNWdtNHJ0eXZoenB3YmZhZGkuY2xvdWR3b3Jrc3RhdGlvbnMuZGV2IiwiaWF0IjoxNzYzNTcyMjQ1LCJleHAiOjE3NjM2NTg2NDV9.ax4k3s1z5GufocOv7eev_AGgq5-ag8ceCbjHZfEuveue3JUlfJkAo1zZr_qx2aF7o0WNYUvqHIHUYH2hqWIOKFOFTlObgt2G7pmD9oAQ4Xqj8VaVrKuQn2SpQFeSy0yaBtpub9N0af45gTQ2cSODP0lb_63nm_jF9iTKnCxc42imcgwALK-Xqr8RihT_WmSNpjxjqPTMPiPNLdnlUgkryk9CzWYDUQSPBx4WKJGBQOhaAwj5rIw1a5cAOQDG1Gnn57n_4UlL3kz3bf_90U6JwT6h6k6fIq2At5J_oU97zanvotvYPkhZgaF5Q7wMrEmgiUYJn7PXkqdRZEe6CK1DaQ","firebaseProjectId":"smartdoctorappointment-77763"}
+[debug] [2025-11-19T17:10:46.133Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-19T17:10:46.138Z] > authorizing via signed-in user (imsiza94@gmail.com)
+[debug] [2025-11-19T17:10:46.138Z] [iam] checking project smartdoctorappointment-77763 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]
+[debug] [2025-11-19T17:10:46.139Z] Checked if tokens are valid: true, expires at: 1763575844349
+[debug] [2025-11-19T17:10:46.139Z] Checked if tokens are valid: true, expires at: 1763575844349
+[debug] [2025-11-19T17:10:46.140Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/smartdoctorappointment-77763:testIamPermissions [none]
+[debug] [2025-11-19T17:10:46.140Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/smartdoctorappointment-77763:testIamPermissions x-goog-quota-user=projects/smartdoctorappointment-77763
+[debug] [2025-11-19T17:10:46.140Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/smartdoctorappointment-77763:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[debug] [2025-11-19T17:10:46.748Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/smartdoctorappointment-77763:testIamPermissions 200
+[debug] [2025-11-19T17:10:46.749Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/smartdoctorappointment-77763:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get"]}
+[info] 
+[info] === Deploying to 'smartdoctorappointment-77763'...
+[info] 
+[info] i  deploying firestore 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2025-11-19T17:10:46.764Z] Checked if tokens are valid: true, expires at: 1763575844349
+[debug] [2025-11-19T17:10:46.764Z] Checked if tokens are valid: true, expires at: 1763575844349
+[debug] [2025-11-19T17:10:46.764Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/smartdoctorappointment-77763/services/firestore.googleapis.com [none]
+[debug] [2025-11-19T17:10:46.764Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/smartdoctorappointment-77763/services/firestore.googleapis.com x-goog-quota-user=projects/smartdoctorappointment-77763
+[debug] [2025-11-19T17:10:47.690Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/smartdoctorappointment-77763/services/firestore.googleapis.com 200
+[debug] [2025-11-19T17:10:47.691Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/smartdoctorappointment-77763/services/firestore.googleapis.com [omitted]
+[info] ✔  firestore: required API firestore.googleapis.com is enabled 
+[info] i  firestore: ensuring required API firestore.googleapis.com is enabled... 
+[debug] [2025-11-19T17:10:47.709Z] Checked if tokens are valid: true, expires at: 1763575844349
+[debug] [2025-11-19T17:10:47.712Z] Checked if tokens are valid: true, expires at: 1763575844349
+[debug] [2025-11-19T17:10:47.712Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/smartdoctorappointment-77763/databases/(default) [none]
+[debug] [2025-11-19T17:10:49.078Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/smartdoctorappointment-77763/databases/(default) 200
+[debug] [2025-11-19T17:10:49.079Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/smartdoctorappointment-77763/databases/(default) {"name":"projects/smartdoctorappointment-77763/databases/(default)","uid":"6aec105d-a2d6-43c1-8371-186af75046b0","createTime":"2025-11-09T10:08:30.565824Z","updateTime":"2025-11-09T10:08:30.565824Z","locationId":"africa-south1","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2025-11-19T16:10:48.994426Z","appEngineIntegrationMode":"DISABLED","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","databaseEdition":"STANDARD","freeTier":true,"realtimeUpdatesMode":"REALTIME_UPDATES_MODE_ENABLED","etag":"IIS+v8va/pADMKK+x8236JAD"}
+[debug] [2025-11-19T17:10:49.139Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received an instance of Array
+    at Object.isAbsolute (node:path:1235:5)
+    at Config.path (/home/user/.global_modules/lib/node_modules/firebase-tools/lib/config.js:141:18)
+    at prepareIndexes (/home/user/.global_modules/lib/node_modules/firebase-tools/lib/deploy/firestore/prepare.js:22:40)
+    at default_1 (/home/user/.global_modules/lib/node_modules/firebase-tools/lib/deploy/firestore/prepare.js:104:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async chain (/home/user/.global_modules/lib/node_modules/firebase-tools/lib/deploy/index.js:43:9)
+    at async deploy (/home/user/.global_modules/lib/node_modules/firebase-tools/lib/deploy/index.js:123:9)
+[error] 
+[error] Error: An unexpected error has occurred.
