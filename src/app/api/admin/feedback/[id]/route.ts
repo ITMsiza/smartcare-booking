@@ -22,9 +22,9 @@ import { db } from '@/app/lib/firebaseAdmin';
  *       500:
  *         description: Internal Server Error.
  */
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+export async function DELETE(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = params;
+    const { id } = await params;
 
     if (!id) {
       return NextResponse.json({ error: 'Feedback ID is required.' }, { status: 400 });

@@ -31,9 +31,9 @@ import { db } from '@/app/lib/firebaseAdmin';
  *       500:
  *         description: Internal Server Error.
  */
-export async function PUT(request: Request, { params }: { params: { id: string } }) {
+export async function PUT(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const data = await request.json();
 
     if (!id || !data || Object.keys(data).length === 0) {

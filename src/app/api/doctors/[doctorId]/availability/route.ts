@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/app/lib/firebaseAdmin';
 
-export async function GET(req: Request, { params }: { params: { doctorId: string } }) {
+export async function GET(req: Request, { params }: { params: Promise<{ doctorId: string }> }) {
   try {
-    const { doctorId } = params;
+    const { doctorId } = await params;
     if (!doctorId) {
       return NextResponse.json({ error: 'Doctor ID is required' }, { status: 400 });
     }
