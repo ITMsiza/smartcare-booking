@@ -11,6 +11,7 @@ import Sidebar from '../../components/layout/Sidebar';
 interface Appointment {
   id: string;
   patientName: string;
+  patientId: string;
   appointmentDate: string;
   status: string;
 }
@@ -79,6 +80,11 @@ export default function DoctorDashboard() {
                             {appointment.status === 'confirmed' && (
                               <Link href={`/doctor-dashboard/complete-appointment/${appointment.id}`} passHref>
                                 <Button>Complete</Button>
+                              </Link>
+                            )}
+                            {appointment.status === 'completed' && (
+                              <Link href={`/patient-history/${appointment.patientId}`} passHref>
+                                <Button>View patient history</Button>
                               </Link>
                             )}
                           </div>
