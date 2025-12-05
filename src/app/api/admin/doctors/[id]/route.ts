@@ -78,9 +78,9 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
  *       500:
  *         description: Internal Server Error.
  */
-export async function DELETE(request: Request, { params }: { params: { id: string } }) {
+export async function DELETE(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
-    const { id } = params;
+    const { id } = await params;
 
     if (!id) {
       return NextResponse.json({ error: 'Doctor ID is required.' }, { status: 400 });
