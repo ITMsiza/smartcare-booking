@@ -13,7 +13,9 @@ interface Appointment {
   status: string;
 }
 
-export default function RescheduleAppointment({ params: { appointmentId } }: { params: { appointmentId: string } }) {
+//export default function RescheduleAppointment({ params: { appointmentId } }: { params: { appointmentId: string } }) {
+ export default async function RescheduleAppointment({ params }: { params: Promise<{ appointmentId: string }> }) {
+  const { appointmentId } = await params;
   const router = useRouter();
   const [appointment, setAppointment] = useState<Appointment | null>(null);
   const [newDate, setNewDate] = useState('');
