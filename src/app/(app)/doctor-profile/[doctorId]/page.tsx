@@ -5,8 +5,10 @@ import { useState, useEffect } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '@/app/lib/firebase';
 
-export default function DoctorProfile({ params }: { params: { doctorId: string } }) {
-  const { doctorId } = params;
+export default async function DoctorProfile(
+  { params }: { params: Promise<{ doctorId: string }> }
+) {
+  const { doctorId } = await params;
   const [doctor, setDoctor] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 

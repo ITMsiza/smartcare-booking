@@ -13,8 +13,10 @@ interface Appointment {
   doctorName: string;
 }
 
-export default function PatientHistory({ params }: { params: { patientId: string } }) {
-  const { patientId } = params;
+export default async function PatientHistory(
+  { params }: { params: Promise<{ patientId: string }> }
+) {
+  const { patientId } = await params;
   const [patientName, setPatientName] = useState('');
   const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [loading, setLoading] = useState(true);
