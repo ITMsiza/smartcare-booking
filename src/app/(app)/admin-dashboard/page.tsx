@@ -2,6 +2,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import Header from '@/app/components/layout/Header';
 import Sidebar from '../../components/layout/Sidebar';
 
 // --- Type Definitions ---
@@ -317,12 +318,17 @@ const FeedbackSection = () => {
 // --- Main Dashboard Page ---
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('doctors');
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const adminNavLinks = [
     { id: 'doctors', label: 'Doctors' },
     { id: 'users', label: 'Users' },
     { id: 'feedback', label: 'Feedback' },
   ];
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
 
   const renderContent = () => {
     switch (activeTab) {
@@ -339,19 +345,9 @@ export default function AdminDashboard() {
 
   return (
     <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
-      <Sidebar 
-        navLinks={adminNavLinks} 
-        activeTab={activeTab}
-        onTabChange={setActiveTab} 
-      />
-      <div className="flex-1 flex flex-col ml-64">
-        <header className="bg-white dark:bg-gray-800 shadow">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Admin Dashboard
-            </h1>
-          </div>
-        </header>
+      <Sidebar navLinks={adminNavLinks} isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <div className="flex-1 flex flex-col">
+      <Header toggleSidebar={toggleSidebar} />
         <main className="flex-1 p-6">
           {renderContent()}
         </main>

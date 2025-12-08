@@ -55,6 +55,7 @@ const generateTimeSlots = (availability: any, date: Date) => {
 
 export default function UserDashboardClient() {
   const { user } = useAuth();
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [doctors, setDoctors] = useState<any[]>([]);
   const [appointments, setAppointments] = useState<any[]>([]);
   const [selectedDoctor, setSelectedDoctor] = useState('');
@@ -69,6 +70,11 @@ export default function UserDashboardClient() {
   const userNavLinks = [
     { href: '/doctor-profiles', label: 'View Doctor Profiles' },
   ];
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
 
   useEffect(() => {
     const fetchDoctors = async () => {
@@ -211,9 +217,9 @@ export default function UserDashboardClient() {
 
   return (
     <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
-      <Sidebar navLinks={userNavLinks} />
-      <div className="flex-1 flex flex-col ml-64">
-        <Header />
+      <Sidebar navLinks={userNavLinks} isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <div className="flex-1 flex flex-col">
+        <Header toggleSidebar={toggleSidebar} />
         <main className="flex-1 p-6">
           {reschedulingAppointment ? (
             <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6 mb-8">

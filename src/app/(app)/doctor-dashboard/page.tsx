@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/app/hooks/useAuth';
 import SetAvailability from '@/app/components/SetAvailability';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Header from '@/app/components/layout/Header';
 import Sidebar from '../../components/layout/Sidebar';
 
 interface Appointment {
@@ -18,12 +19,18 @@ interface Appointment {
 
 export default function DoctorDashboard() {
   const { user } = useAuth();
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [appointments, setAppointments] = useState<Appointment[]>([]);
   const [loading, setLoading] = useState(true);
 
   const doctorNavLinks = [
     { href: '/doctor-profile', label: 'Profile' },
   ];
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
+
 
   useEffect(() => {
     if (user) {
@@ -41,15 +48,9 @@ export default function DoctorDashboard() {
 
   return (
     <div className="flex min-h-screen bg-gray-100 dark:bg-gray-900">
-      <Sidebar navLinks={doctorNavLinks} />
-      <div className="flex flex-col flex-1 ml-64">
-        <header className="bg-white dark:bg-gray-800 shadow">
-          <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Doctor Dashboard
-            </h1>
-          </div>
-        </header>
+      <Sidebar navLinks={doctorNavLinks} isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
+      <div className="flex-1 flex flex-col">
+      <Header toggleSidebar={toggleSidebar} />
         <main className="flex-1 p-6">
           <div className="grid gap-6">
             <Card>
