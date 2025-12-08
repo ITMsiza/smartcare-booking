@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { auth } from "@/app/lib/firebase"; // Import Firebase auth
 import { signInWithCustomToken } from "firebase/auth";
 
@@ -168,6 +169,14 @@ export default function RegisterPage() {
               </button>
             )}
           </div>
+          <div className="text-center mt-4">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Already have an account?{" "}
+                <Link href="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
+                  Sign in
+                </Link>
+              </p>
+            </div>
         </form>
       </div>
     </div>
