@@ -56,8 +56,8 @@ https://smartcare-booking-v16e.vercel.app
 <img width="1366" height="686" alt="Login" src="https://github.com/user-attachments/assets/ccb2f483-5cda-42da-bfd6-65d1b8a41bda" />
 
 ### Patient Dashboard
-<img width="1366" height="768" alt="PatientDashboard" src="https://github.com/user-attachments/assets/14c4bda2-794b-4c26-9fbd-1ef586c6e531" />
-<img width="1366" height="768" alt="PatientDashboard Continuation" src="https://github.com/user-attachments/assets/285a6e0f-94af-41c4-bc0c-646d4dd96099" />
+<img width="1366" height="680" alt="PatientDashboard" src="https://github.com/user-attachments/assets/4c626dc7-db13-4661-8e81-0ab879703488" />
+<img width="1366" height="684" alt="PatientDashboard Continuation" src="https://github.com/user-attachments/assets/b450f5db-75ac-4605-8a4b-cefe657ac094" />
 
 ### Doctor Dashboard
 <img width="1366" height="684" alt="DoctorDashboard" src="https://github.com/user-attachments/assets/f5dfbfa2-ec5c-455b-b79c-c2fd5da80cd8" />
